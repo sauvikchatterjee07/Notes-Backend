@@ -3,10 +3,6 @@ const mongoose = require("mongoose");
 // Define the Schema
 const noteSchema = new mongoose.Schema(
     {
-        id: {
-            type: Number,
-            required: true,
-        },
         title: {
             type: String,
             required: true,
@@ -17,7 +13,7 @@ const noteSchema = new mongoose.Schema(
             required: true,
         },
     },
-    { timestamps: true, _id: false }
+    { timestamps: true }
 );
 
 const Notes = mongoose.model("Notes", noteSchema);

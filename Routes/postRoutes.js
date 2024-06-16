@@ -18,13 +18,7 @@ router.post("/note", async (req, res) => {
 
         if (!existingNote) {
             console.log("Inside if block");
-            const note = await noteObj.save((error, result) => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log(res);
-                }
-            });
+            const note = await noteObj.save();
             console.log(note);
             return res.status(200).json({
                 message: "Note saved successfully",
@@ -40,8 +34,3 @@ router.post("/note", async (req, res) => {
 });
 
 module.exports = router;
-
-// memo -> React
-// useMemo(()=>{
-
-// })

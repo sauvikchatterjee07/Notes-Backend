@@ -9,7 +9,7 @@ function connectToDB() {
                 res();
             })
             .catch(() => {
-                console.log("DB Connected Failure");
+                console.log("DB Connection Failure");
                 rej();
             });
     });
